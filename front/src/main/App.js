@@ -1,12 +1,12 @@
 import React from 'react';
 import Header from '../template/header'
-import NumbersList from '../numbers/numbersList'
+import PhoneNumbers from '../numbers/phoneNumbers'
 
 function App() {
   return (
     <div className="App">
       <Header />
-      <NumbersList />
+      <PhoneNumbers />
     </div>
   );
 }
