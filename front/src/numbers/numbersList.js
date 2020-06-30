@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { getList } from './numbersActions'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import { Container, Table, Tab, Tabs, Button } from 'react-bootstrap';
+import { Table, Tab, Tabs, Button } from 'react-bootstrap';
 
 class numbersList extends Component {
 

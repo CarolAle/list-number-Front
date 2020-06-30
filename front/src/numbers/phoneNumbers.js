@@ -1,6 +1,10 @@
 import React, { Component } from 'react'
 import NumbersList from './numbersList'
-import { Container, Table, Tab, Tabs, Button } from 'react-bootstrap';
+import NumbersForm from './numbersForm'
+import { Container, Table, Tab, Tabs, Button } from 'react-bootstrap'
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
+import { create } from './numbersActions'
 
 class PhoneNumbers extends Component {
 
@@ -13,7 +17,7 @@ class PhoneNumbers extends Component {
                     </Tab>
 
                     <Tab eventKey="Add" title="Add">
-                        <h1>ola</h1>
+                        <NumbersForm onSubmit={this.props.create} />
                     </Tab>
                 </Tabs>
             </Container>
@@ -21,4 +25,5 @@ class PhoneNumbers extends Component {
     }
 }
 
-export default PhoneNumbers
+const mapDispathToProps = dispatch => bindActionCreators({ create }, dispatch)
+export default connect(null, mapDispathToProps)(PhoneNumbers)
